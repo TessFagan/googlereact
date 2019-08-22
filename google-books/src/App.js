@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import page1 from "./components/page1";
 import page2 from "./components/page2";
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={page1} />
           <Route exact path="/savedBooks" component={page2} />
-          <Route component={NoMatch} />
+          <Route component={noMatch} />
         </Switch>
       </div>
     </Router>
