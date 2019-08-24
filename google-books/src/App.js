@@ -3,29 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Page1 from "./components/page1";
 import Page2 from "./components/page2";
-import noMatch from "./components/noMatch";
-import axios from "axios";
+
 
 class App extends Component {
-
-  state = {
-    searchInput: [],
-    submitVal: "",
-    response: []
-  };
-
-  handleClick = (term) => {
-    console.log("submit clicked => " + term);
-
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${term}`).then((response) => {
-      console.log(response.data)
-      this.state.response.push(response.data)
-      this.setState({
-        response: this.state.response
-      });
-    });
-
-  }
 
   render() {
     return (
@@ -33,16 +13,13 @@ class App extends Component {
       <Router >
         <div>
           <Switch>
-            <Route exact path='/' render={(props) => <Page1 {...props} handleClick={this.handleClick} />} />
-            {/* <Route exact path='/' component={Page1} /> */}
+            <Route exact path='/' component={Page1} />
             <Route exact path='/savedbooks' component={Page2} />
-            <Route component={noMatch} />
           </Switch>
         </div>
       </Router >
     );
   }
 }
-
 
 export default App;
