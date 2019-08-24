@@ -4,19 +4,20 @@
   height: 400px;
   margin: 1%;
   position: relative;
-  width: 100%;
+  width: 75%;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
 
 #card > #img-container {
   height: 100%;
+  width: 30%;
   overflow: hidden;
   text-align: center;
   background:rgb(252, 252, 252);
 }
 #card > #img-container > img {
-  width: 50%
+  width: 100%
 }
 
 #card > .content {

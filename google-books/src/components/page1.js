@@ -63,7 +63,8 @@ class Page1 extends React.Component {
                             {this.state.response.map(item => (
                                 <ListItem key={item.id}>
                                     <Card id="card">
-                                        <Card.Img id="img-container" src={item.volumeInfo.imageLinks.thumbnail} />
+                                        <Card.Img id="img-container"
+                                            src={item.volumeInfo.imageLinks.thumbnail} />
                                         <Card.Body>
                                             <Card.Title> {item.volumeInfo.title}</Card.Title>
                                             <Card.Text>
