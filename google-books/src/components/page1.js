@@ -37,7 +37,7 @@ class Page1 extends React.Component {
                     <div className="collapse navbar-collapse" id="navbarMenu">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <a className="nav-link">Saved Books</a>
+                                <a className="nav-link" href="https://googlebook123456.herokuapp.com/savedbooks">Saved Books</a>
                             </li>
                         </ul>
                     </div>
