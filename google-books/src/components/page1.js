@@ -1,13 +1,15 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
+import { List, ListItem } from "../components/ListItem";
 
 class Page1 extends React.Component {
     state = {
         search: "",
+        response: []
     }
     handleClick = (e) => {
         e.preventDefault();
@@ -22,6 +24,8 @@ class Page1 extends React.Component {
             [name]: value
         });
     }
+
+
     render() {
         return (
             <div>
@@ -51,14 +55,13 @@ class Page1 extends React.Component {
                     </Form>
                 </Jumbotron>
                 <Jumbotron>
-                    <h3>Results:</h3>
+                    <h3>Results</h3>
                 </Jumbotron>
 
             </div >
         );
     }
 };
-
 
 export default Page1;
 

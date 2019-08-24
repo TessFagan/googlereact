@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
-class page2 extends Component {
+class Page2 extends Component {
 
     render() {
         return (
@@ -27,4 +27,4 @@ class page2 extends Component {
 }
 
 
-export default page2;
+export default Page2;
